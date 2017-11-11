@@ -1,6 +1,6 @@
 # Frank's guide for CS24 project 1: Atomic Expressions
-# Email: franklee@umail.ucsb.edu 
-# 10/11
+##### Email: franklee@umail.ucsb.edu 
+##### 10/11
 
 ## Brief summary:
 
@@ -70,6 +70,8 @@ Now, the definition for `prefixstring()` and `postfixstring()` is easy. We simpl
 #### Break down:
 
 This file provides the user implementation for the `main.cpp` file. Essentially, all it does is it takes an input string (provided by the user) and just prints out the infix, prefix and postfix expressions using the `expression` class. Besides this, I can't think of anything else to implement! Are we sure this is all we need? 
+
+## The end! Let me know if something is wrong, or if you found a better way or even if you cleaned things up!
 
 
 
