@@ -44,9 +44,17 @@ This is the big one, and was bloody difficult. The `infixstring()` method does n
 ```c++
 head=head->left();
 ```
+We then go through the node, and after we're finished we traverse back to the parent node via
+```c++
+head=head->getparent();
+```
+and then set
+```c++
+head->left()=NULL;
+```
+and then we iterate through the while loop. This time, since the left node is pointing to NULL we are forced to go into the right node and do the same (more or less) thing. There are bunch of exceptions, as you can see by the multiple `else if` statements but if you read through it, it should make some sense (it took me forever to figure this out). 
 
-
-
+So you can see that everytime we are done with a node, we just traverse back to its parents and set the pointer to that ndoe to NULL. Eventually, we will be stuck at the head so how will it know to stop at the head? 
 
 
 
