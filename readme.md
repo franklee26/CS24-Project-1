@@ -21,6 +21,33 @@ The list class works to convert a string atomic expression i.e (x+3) into a bina
 
 The key point worth mentioning is that the node class has a constructor that initialises a node to have an `myoperator` value of `f`, an `integer` value of 0 and all node pointers to point to `NULL`. The other methods and observers are pretty straight forward.  
 
+## list.h
+
+### TO-DO:
+
+1. Possibly remove the `list()` and `list(node* myhead)` constructors?
+
+### Break down:
+
+The important feature is the constructor `list(string atomixexpression)`, which converts our string into this binary node tree. See the implementation of this in the corresponding `list.cpp` file. This algorithm was basically given to us in the project PDF, but we needed to add where our private member `head` pointed to after the tree was created. 
+
+## expression.cpp
+
+### TO-DO:
+
+1. General clean up (make sure code is organised, weird comments made by me should be removed soon) 
+2. Bug testing! (Everything seems to work, but I need to make sure about everything!)
+
+### Break down:
+
+This is the big one, and was bloody difficult. The `infixstring()` method does not need a parameter, since we have a head node pointing to the list in our private declaration. I tried a recursive means of doing this, but I didn't make it... it got really messy. So, I chose an iterative approach where we first traverse all the way to the very bottom left leaf via the iterative call 
+```c++
+head=head->left();
+```
+
+
+
+
 
 
 
